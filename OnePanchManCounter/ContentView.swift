@@ -29,20 +29,25 @@ struct ContentView: View {
         if let i = focusOnIndex {
           VStack{
             ArrowButton(.left){
-              self.focusOnIndex = .none
+              withAnimation(){
+                self.focusOnIndex = .none
+              }
+              
             }
-            CounterButton(training: trainings[i], action: {
+            CounterButton(training: trainings[i]){
               trainings[i].count += 1
-            })
-          }
+            }
+          }.transition(.opacity)
         } else {
           ForEach(Array(trainings.enumerated()), id: \.element.name) { (i, t) in
             HStack {
-              CounterButton(training: t, action: {
+              CounterButton(training: t){
                 trainings[i].count += 1
-              })
+              }
               ArrowButton(.right) {
-                self.focusOnIndex = i
+                withAnimation(){
+                  self.focusOnIndex = i
+                }
               }
             }
           }
