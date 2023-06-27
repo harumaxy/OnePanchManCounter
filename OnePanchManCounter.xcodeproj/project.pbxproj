@@ -13,6 +13,7 @@
 		39183F9B2A4A77D1003E1846 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39183F9A2A4A77D1003E1846 /* Preview Assets.xcassets */; };
 		39183FA22A4A9348003E1846 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39183FA12A4A9348003E1846 /* CounterButton.swift */; };
 		39183FA42A4A997E003E1846 /* ArrowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39183FA32A4A997E003E1846 /* ArrowButton.swift */; };
+		39183FA62A4AA1DE003E1846 /* CircleProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39183FA52A4AA1DE003E1846 /* CircleProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		39183F9A2A4A77D1003E1846 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		39183FA12A4A9348003E1846 /* CounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
 		39183FA32A4A997E003E1846 /* ArrowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowButton.swift; sourceTree = "<group>"; };
+		39183FA52A4AA1DE003E1846 /* CircleProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				39183F932A4A77CF003E1846 /* OnePanchManCounterApp.swift */,
 				39183F952A4A77CF003E1846 /* ContentView.swift */,
 				39183FA12A4A9348003E1846 /* CounterButton.swift */,
+				39183FA52A4AA1DE003E1846 /* CircleProgressBar.swift */,
 				39183FA32A4A997E003E1846 /* ArrowButton.swift */,
 				39183F972A4A77D1003E1846 /* Assets.xcassets */,
 				39183F992A4A77D1003E1846 /* Preview Content */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39183F962A4A77CF003E1846 /* ContentView.swift in Sources */,
+				39183FA62A4AA1DE003E1846 /* CircleProgressBar.swift in Sources */,
 				39183FA22A4A9348003E1846 /* CounterButton.swift in Sources */,
 				39183F942A4A77CF003E1846 /* OnePanchManCounterApp.swift in Sources */,
 				39183FA42A4A997E003E1846 /* ArrowButton.swift in Sources */,
