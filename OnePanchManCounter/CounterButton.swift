@@ -38,7 +38,7 @@ struct CounterButton: View {
 
 struct CounterButton_Previews: PreviewProvider {
   static var previews: some View {
-    CounterButton(training: Training(name: "Test", count: 999)) {}
+    CounterButton(training: Training(name: "Training Name", count: 999)) {}
       .previewLayout(.sizeThatFits)
   }
 }
