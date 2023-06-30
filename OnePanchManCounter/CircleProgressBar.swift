@@ -7,7 +7,7 @@ struct CircleProgressBar: View {
     CGFloat(min(count, 100)) / maxCount
   }
   var body: some View {
-    ZStack(alignment: .topLeading) {
+    ZStack() {
       Circle()
         .stroke(lineWidth: 24)
         .opacity(0.3)
@@ -21,7 +21,8 @@ struct CircleProgressBar: View {
       if (count >= Int(maxCount)) {
         Image(systemName: "checkmark.circle")
           .resizable()
-          .frame(width: 100, height: 100)
+          .aspectRatio(contentMode: .fit)
+          .padding(20)
           .foregroundColor(.blue)
       }
     }.padding()
