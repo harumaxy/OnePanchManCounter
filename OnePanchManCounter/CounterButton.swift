@@ -16,7 +16,6 @@ struct CounterButton: View {
   
   var body: some View {
     ZStack {
-      Color(bgColor)
       CircleProgressBar(count: training.count)
       HStack(spacing: 10)
       {
@@ -40,7 +39,10 @@ struct CounterButton: View {
 
 struct CounterButton_Previews: PreviewProvider {
   static var previews: some View {
-    CounterButton(training: Training(name: "Training Name", count: 10)) {}
-      .previewLayout(.sizeThatFits)
+    ZStack{
+      Color.black
+      CounterButton(training: Training(name: "Training Name", count: 10)) {}
+    }
+    .previewLayout(.sizeThatFits)
   }
 }
