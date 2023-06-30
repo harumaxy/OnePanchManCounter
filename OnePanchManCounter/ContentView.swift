@@ -21,24 +21,11 @@ struct ContentView: View {
   ]
   @State var focusOnIndex : Int? = .none
   
-  
   var body: some View {
     ZStack{
-      Color.black.ignoresSafeArea()
-      VStack{
-        if let i = focusOnIndex {
-          VStack{
-            ArrowButton(.left){
-              withAnimation(){
-                self.focusOnIndex = .none
-              }
-              
-            }
-            CounterButton(training: trainings[i]){
-              trainings[i].count += 1
-            }
-          }.transition(.opacity)
-        } else {
+      ZStack {
+        Color.black.ignoresSafeArea()
+        VStack{
           ForEach(Array(trainings.enumerated()), id: \.element.name) { (i, t) in
             HStack {
               CounterButton(training: t){
@@ -51,17 +38,41 @@ struct ContentView: View {
               }
             }
           }
+          RunningCounter()
         }
-        
-        
-      }.padding()
-    }}
+      }
+      if let i = focusOnIndex {
+        ZStack{
+          Color.black.ignoresSafeArea()
+          VStack{
+            ArrowButton(.left){
+              withAnimation(){
+                self.focusOnIndex = .none
+              }
+              
+            }
+            CounterButton(training: trainings[i]){
+              trainings[i].count += 1
+            }
+          }.transition(.opacity)
+        }
+      }
+    }
+  }
+  
+  
+
 }
 
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ContentView(
+      trainings: [
+        Training(name: "Push up", count: 0),
+        Training(name: "Sit up", count: 0),
+        Training(name: "Squat", count: 0)
+      ])
   }
 }
 
